@@ -19,7 +19,7 @@
 | `evaluation/` | 공통 평가(`eval_common.py`), 결과 형식 변환, 게시물 단위 McNemar+BH(`mcnemar_post.py`), 그림 2 | 3.5, 표 3, 4.2, 그림 2 |
 | `preds/` | 표 3에 쓴 모든 예측 점수 (공통 형식) | 표 3 |
 | `results/` | `eval_common.py`·`mcnemar_post.py` 출력과 그림 2 | 표 3, 4.2, 그림 2 |
-| `naturalness/` | 4.3 교차 결합의 자연도 (TODO) | 4.3 |
+| `naturalness/` | 교차 결합의 자연도: 자연도 점수, 판정자 타당성, 자연도 반영 결합(선형 할당), R→R·R→C·C→C 비교 (방법론대로 재구현, `naturalness/README.md` 참고) | 4.3 |
 
 ## 데이터셋
 
@@ -120,6 +120,15 @@ python ../evaluation/convert_existing.py zeroshot --root results_zeroshot --out 
 ```bash
 cd text_baseline
 for s in 1 2 3; do python text_baseline.py --seed $s; done   # UnSmile에서 test 문장을 뺀 11,626문장으로 학습
+```
+
+### 6. 교차 결합의 자연도 (4.3)
+
+2번의 VARCO 본 실험 결과를 입력으로 쓴다. 자세한 절차는 [naturalness/README.md](naturalness/README.md)를 참고한다.
+
+```bash
+cd naturalness
+./run_naturalness.sh "1 2 3 4 5"
 ```
 
 ## 참고 사항
