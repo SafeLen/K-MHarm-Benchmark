@@ -1,0 +1,14 @@
+{
+  "model": "beomi/KcELECTRA-base-v2022",
+  "seed": 1,
+  "best_epoch": 2,
+  "valid_auroc": 0.9808930655048461,
+  "n_train": 11626,
+  "n_valid": 2885,
+  "lr": 2e-05,
+  "bs": 32,
+  "epochs": 3,
+  "max_len": 128,
+  "minutes": 29.5,
+  "device": "cpu"
+}

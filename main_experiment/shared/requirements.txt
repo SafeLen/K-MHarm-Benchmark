@@ -1,0 +1,13 @@
+# 본 실험(VARCO-VISION-2.0-1.7B LoRA)에서 bf16 경로를 검증한 버전으로 고정한다
+# (transformers/peft가 바뀌면 LLaVA-OneVision 처리 경로가 달라져 재현이 깨질 수 있음).
+torch==2.5.1
+torchvision==0.20.1
+transformers==4.53.1
+accelerate==1.0.1
+peft==0.13.2
+pillow
+numpy
+pandas
+scikit-learn
+tqdm
+matplotlib

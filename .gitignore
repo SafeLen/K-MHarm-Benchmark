@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 대용량 산출물·가중치는 저장소에 넣지 않는다
+outputs/
+outputs_*/
+results_zeroshot/
+results_smoke/
+*.safetensors
+*.bin
+*.pt
+
+# UnSmile 원본 TSV는 공식 저장소에서 받는다 (README 참고)
+data_construction/unsmile/
+# 1024px 원본은 GitHub Release의 image_dataset_1024.zip으로 배포한다
+image_dataset_1024/
+*.zip
+
+# 비밀 정보
+*.pem
+.env

@@ -1,0 +1,8 @@
+# evaluation/ 과 text_baseline/ (GPU 없어도 됨)
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+torch
+transformers
